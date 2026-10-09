@@ -1056,10 +1056,51 @@ ul { list-style: none; margin: 0; padding: 0; }
   position: relative;
   border-top: 1px dashed rgb(30 47 107 / .18);
 }
+
+.press__carousel-wrapper {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.press__carousel {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding-block: .8rem 1.4rem;
+  padding-inline: 4px;
+}
+.press__carousel::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .press__carousel {
+    scroll-snap-type: x mandatory;
+  }
+}
+
+.press__track {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  width: max-content;
+}
+
+.press__slide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  width: min(100vw - 2.5rem, var(--container));
+  flex: 0 0 min(100vw - 2.5rem, var(--container));
+  box-sizing: border-box;
+}
+
 .press__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(1.5rem, 3vw, 2.2rem);
+  align-items: stretch;
+  height: 100%;
 }
 
 .press-card {
@@ -1071,6 +1112,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   box-shadow: 0 15px 35px -15px rgb(30 47 107 / .18);
   border: 2px solid rgb(30 47 107 / .1);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  height: 100%;
 }
 .press-card:hover {
   transform: translateY(-6px);
@@ -1115,6 +1157,21 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .press-card__badge--estadao {
   background: #0024b9;
+  color: var(--white);
+  border-color: rgb(255 255 255 / .3);
+}
+.press-card__badge--oglobo {
+  background: #1e4c9a;
+  color: var(--white);
+  border-color: rgb(255 255 255 / .3);
+}
+.press-card__badge--valor {
+  background: #006269;
+  color: var(--white);
+  border-color: rgb(255 255 255 / .3);
+}
+.press-card__badge--pegn {
+  background: #c61d23;
   color: var(--white);
   border-color: rgb(255 255 255 / .3);
 }
@@ -1238,6 +1295,33 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .press-card__cta:hover svg {
   transform: translateX(4px);
+}
+
+/* Indicadores / Dots do Carrossel Na Mídia */
+.press__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 1.8rem;
+}
+.press-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: rgb(30 47 107 / .22);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+.press-dot:hover {
+  background: var(--red);
+  transform: scale(1.15);
+}
+.press-dot.is-active {
+  background: var(--red);
+  width: 32px;
 }
 
 /* =========================================================
@@ -1578,7 +1662,6 @@ ul { list-style: none; margin: 0; padding: 0; }
    ========================================================= */
 @media (max-width: 1024px) {
   .dream__grid { grid-template-columns: repeat(2, 1fr); }
-  .press__grid { grid-template-columns: repeat(2, 1fr); }
   .step { grid-template-columns: 1fr; }
   .step__label { display: flex; align-items: end; gap: 1rem; flex-wrap: wrap; }
   .step__label h3 { margin: 0; }

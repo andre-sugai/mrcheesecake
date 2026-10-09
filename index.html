@@ -570,111 +570,245 @@
           </div>
         </header>
 
-        <div class="press__grid">
-          <!-- Matéria 1: Revista TRÄMP -->
-          <article class="press-card reveal">
-            <a href="https://tramp.com.br/lifestyle/gastronomia/veja-15-lugares-para-provar-um-bom-cheesecake/" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria na Revista TRÄMP: Veja 15 lugares para provar um bom cheesecake">
-              <img src="assets/img/midia_tramp.jpg" alt="Matéria Revista TRÄMP: 15 lugares para provar um bom cheesecake" loading="lazy" width="600" height="400">
-              <span class="press-card__badge">Revista TRÄMP</span>
-              <span class="press-card__overlay">
-                <span class="press-card__overlay-btn">
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
-                  <span>Abrir matéria</span>
-                </span>
-              </span>
-            </a>
-            <div class="press-card__body">
-              <div class="press-card__source-line">
-                <span class="press-card__source-name">Revista TRÄMP</span>
-                <span class="press-card__sep">·</span>
-                <span class="press-card__category">Gastronomia</span>
-              </div>
-              <h3 class="press-card__title">
-                <a href="https://tramp.com.br/lifestyle/gastronomia/veja-15-lugares-para-provar-um-bom-cheesecake/" target="_blank" rel="noopener">
-                  Veja 15 lugares para provar um bom cheesecake
-                </a>
-              </h3>
-              <p class="press-card__excerpt">
-                “Fundada em 2015 por Ruby Zucker, a Mr. Cheesecake nasceu na cozinha de casa e rapidamente ganhou destaque em São Paulo com suas receitas assadas à moda novaiorquina.”
-              </p>
-              <div class="press-card__footer">
-                <a href="https://tramp.com.br/lifestyle/gastronomia/veja-15-lugares-para-provar-um-bom-cheesecake/" target="_blank" rel="noopener" class="press-card__cta">
-                  <span>Ler matéria completa</span>
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
+        <!-- Carrossel de Notícias na Imprensa -->
+        <div class="press__carousel-wrapper reveal">
+          <button type="button" class="carousel-arrow carousel-arrow--prev" id="press-prev" aria-label="Notícias anteriores" title="Notícias anteriores">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-left"/></svg>
+          </button>
 
-          <!-- Matéria 2: Escape Magazine -->
-          <article class="press-card reveal">
-            <a href="https://escapemagazine.com.br/pedro-hering-mr-cheesecake-bake-shop-deli-um-classico-nova-iorquino-em-sao-paulo/" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria na Escape Magazine: Pedro Hering: Mr Cheesecake Bake Shop & Deli, um clássico nova-iorquino em São Paulo">
-              <img src="assets/img/midia_escape.jpg" alt="Matéria Escape Magazine: Pedro Hering sobre Mr Cheesecake Bake Shop & Deli" loading="lazy" width="600" height="400">
-              <span class="press-card__badge">Escape Magazine</span>
-              <span class="press-card__overlay">
-                <span class="press-card__overlay-btn">
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
-                  <span>Abrir matéria</span>
-                </span>
-              </span>
-            </a>
-            <div class="press-card__body">
-              <div class="press-card__source-line">
-                <span class="press-card__source-name">Escape Magazine</span>
-                <span class="press-card__sep">·</span>
-                <span class="press-card__category">Coluna Pedro Hering</span>
-              </div>
-              <h3 class="press-card__title">
-                <a href="https://escapemagazine.com.br/pedro-hering-mr-cheesecake-bake-shop-deli-um-classico-nova-iorquino-em-sao-paulo/" target="_blank" rel="noopener">
-                  Pedro Hering: Mr Cheesecake Bake Shop &amp; Deli, um clássico nova-iorquino em SP
-                </a>
-              </h3>
-              <p class="press-card__excerpt">
-                “A casa traz para São Paulo a cultura das clássicas delis novaiorquinas, combinando ambiente acolhedor, bagels artesanais com salmão defumado e cheesecake autêntico.”
-              </p>
-              <div class="press-card__footer">
-                <a href="https://escapemagazine.com.br/pedro-hering-mr-cheesecake-bake-shop-deli-um-classico-nova-iorquino-em-sao-paulo/" target="_blank" rel="noopener" class="press-card__cta">
-                  <span>Ler matéria completa</span>
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
+          <div class="press__carousel" id="press-carousel" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Destaques do Mr. Cheesecake na mídia">
+            <div class="press__track" id="press-track">
+              <!-- Slide 1: 3 Notícias (Mais recentes) -->
+              <div class="press__slide" role="group" aria-roledescription="slide" aria-label="1 de 2">
+                <div class="press__grid">
+                  <!-- Matéria 1: Revista PEGN -->
+                  <article class="press-card">
+                    <a href="https://revistapegn.globo.com/conteudo-de-marca/pulse-brand/noticia/2026/08/da-cozinha-de-casa-a-retomada-da-loja-a-trajetoria-da-mr-cheesecake-1.ghtml" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria na Revista PEGN: Da cozinha de casa à retomada da loja: a trajetória da Mr Cheesecake">
+                      <img src="assets/img/midia_pegn.jpg" alt="Matéria Revista PEGN: Da cozinha de casa à retomada da loja: a trajetória da Mr Cheesecake" loading="lazy" width="600" height="400">
+                      <span class="press-card__badge press-card__badge--pegn">Revista PEGN</span>
+                      <span class="press-card__overlay">
+                        <span class="press-card__overlay-btn">
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
+                          <span>Abrir matéria</span>
+                        </span>
+                      </span>
+                    </a>
+                    <div class="press-card__body">
+                      <div class="press-card__source-line">
+                        <span class="press-card__source-name">Revista PEGN</span>
+                        <span class="press-card__sep">·</span>
+                        <span class="press-card__category">Empreendedorismo</span>
+                      </div>
+                      <h3 class="press-card__title">
+                        <a href="https://revistapegn.globo.com/conteudo-de-marca/pulse-brand/noticia/2026/08/da-cozinha-de-casa-a-retomada-da-loja-a-trajetoria-da-mr-cheesecake-1.ghtml" target="_blank" rel="noopener">
+                          Da cozinha de casa à retomada da loja: a trajetória da Mr Cheesecake
+                        </a>
+                      </h3>
+                      <p class="press-card__excerpt">
+                        “Marca criada em 2015 atravessou expansão, pandemia e uma pausa antes de retomar as atividades com nova sociedade, loja com 50 lugares e expansão de cardápio.”
+                      </p>
+                      <div class="press-card__footer">
+                        <a href="https://revistapegn.globo.com/conteudo-de-marca/pulse-brand/noticia/2026/08/da-cozinha-de-casa-a-retomada-da-loja-a-trajetoria-da-mr-cheesecake-1.ghtml" target="_blank" rel="noopener" class="press-card__cta">
+                          <span>Ler matéria completa</span>
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
 
-          <!-- Matéria 3: Estadão -->
-          <article class="press-card reveal">
-            <a href="https://www.estadao.com.br/cultura/divirta-se/mr-cheesecake-abre-primeira-loja-em-sao-paulo-confira-outras-dicas-de-quitutes-na-cidade/" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria no Estadão: Mr. Cheesecake abre primeira loja em São Paulo; confira outras dicas de quitutes na cidade">
-              <img src="assets/img/midia_estadao.jpg" alt="Matéria Estadão: Mr. Cheesecake abre primeira loja em São Paulo" loading="lazy" width="600" height="400">
-              <span class="press-card__badge press-card__badge--estadao">Estadão</span>
-              <span class="press-card__overlay">
-                <span class="press-card__overlay-btn">
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
-                  <span>Abrir matéria</span>
-                </span>
-              </span>
-            </a>
-            <div class="press-card__body">
-              <div class="press-card__source-line">
-                <span class="press-card__source-name">Estadão</span>
-                <span class="press-card__sep">·</span>
-                <span class="press-card__category">Caderno Divirta-se</span>
+                  <!-- Matéria 2: Valor Econômico -->
+                  <article class="press-card">
+                    <a href="https://valor.globo.com/patrocinado/pulse-brand/noticia/2026/08/05/mr-cheesecake-reforca-operacao-em-mercado-de-alimentacao-de-r-495-bilhoes-1.ghtml" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria no Valor Econômico: Mr. Cheesecake reforça operação em mercado de alimentação de R$ 495 bilhões">
+                      <img src="assets/img/midia_valor.jpg" alt="Matéria Valor Econômico: Mr. Cheesecake reforça operação em mercado de alimentação de R$ 495 bilhões" loading="lazy" width="600" height="400">
+                      <span class="press-card__badge press-card__badge--valor">Valor Econômico</span>
+                      <span class="press-card__overlay">
+                        <span class="press-card__overlay-btn">
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
+                          <span>Abrir matéria</span>
+                        </span>
+                      </span>
+                    </a>
+                    <div class="press-card__body">
+                      <div class="press-card__source-line">
+                        <span class="press-card__source-name">Valor Econômico</span>
+                        <span class="press-card__sep">·</span>
+                        <span class="press-card__category">Negócios</span>
+                      </div>
+                      <h3 class="press-card__title">
+                        <a href="https://valor.globo.com/patrocinado/pulse-brand/noticia/2026/08/05/mr-cheesecake-reforca-operacao-em-mercado-de-alimentacao-de-r-495-bilhoes-1.ghtml" target="_blank" rel="noopener">
+                          Mr. Cheesecake reforça operação em mercado de alimentação de R$ 495 bilhões
+                        </a>
+                      </h3>
+                      <p class="press-card__excerpt">
+                        “Marca nascida na cozinha de casa investe em loja multifuncional, cardápio ampliado e integração com canais digitais para acelerar o crescimento no setor de alimentação fora do lar.”
+                      </p>
+                      <div class="press-card__footer">
+                        <a href="https://valor.globo.com/patrocinado/pulse-brand/noticia/2026/08/05/mr-cheesecake-reforca-operacao-em-mercado-de-alimentacao-de-r-495-bilhoes-1.ghtml" target="_blank" rel="noopener" class="press-card__cta">
+                          <span>Ler matéria completa</span>
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Matéria 3: O Globo -->
+                  <article class="press-card">
+                    <a href="https://oglobo.globo.com/patrocinado/pulse-brand/noticia/2026/07/29/dia-do-cheesecake-destaca-sobremesa-que-saiu-da-cozinha-de-casa-e-virou-negocio-1.ghtml" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria em O Globo: Dia do Cheesecake destaca sobremesa que saiu da cozinha de casa e virou negócio">
+                      <img src="assets/img/midia_oglobo.jpg" alt="Matéria O Globo: Dia do Cheesecake destaca sobremesa que saiu da cozinha de casa e virou negócio" loading="lazy" width="600" height="400">
+                      <span class="press-card__badge press-card__badge--oglobo">O Globo</span>
+                      <span class="press-card__overlay">
+                        <span class="press-card__overlay-btn">
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
+                          <span>Abrir matéria</span>
+                        </span>
+                      </span>
+                    </a>
+                    <div class="press-card__body">
+                      <div class="press-card__source-line">
+                        <span class="press-card__source-name">O Globo</span>
+                        <span class="press-card__sep">·</span>
+                        <span class="press-card__category">Gastronomia &amp; Negócios</span>
+                      </div>
+                      <h3 class="press-card__title">
+                        <a href="https://oglobo.globo.com/patrocinado/pulse-brand/noticia/2026/07/29/dia-do-cheesecake-destaca-sobremesa-que-saiu-da-cozinha-de-casa-e-virou-negocio-1.ghtml" target="_blank" rel="noopener">
+                          Dia do Cheesecake destaca sobremesa que saiu da cozinha de casa e virou negócio
+                        </a>
+                      </h3>
+                      <p class="press-card__excerpt">
+                        “Celebrado em 30 de julho, o doce de inspiração nova-iorquina está no centro da trajetória da Mr. Cheesecake, combinando produção artesanal, ambiente de deli e estratégia de crescimento.”
+                      </p>
+                      <div class="press-card__footer">
+                        <a href="https://oglobo.globo.com/patrocinado/pulse-brand/noticia/2026/07/29/dia-do-cheesecake-destaca-sobremesa-que-saiu-da-cozinha-de-casa-e-virou-negocio-1.ghtml" target="_blank" rel="noopener" class="press-card__cta">
+                          <span>Ler matéria completa</span>
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
               </div>
-              <h3 class="press-card__title">
-                <a href="https://www.estadao.com.br/cultura/divirta-se/mr-cheesecake-abre-primeira-loja-em-sao-paulo-confira-outras-dicas-de-quitutes-na-cidade/" target="_blank" rel="noopener">
-                  Mr. Cheesecake abre loja em São Paulo; confira dicas de quitutes na cidade
-                </a>
-              </h3>
-              <p class="press-card__excerpt">
-                “Com inspiração americana, as tortas da marca ganharam endereço próprio na capital paulista, conquistando o público com receitas fiéis assadas à moda de Nova York.”
-              </p>
-              <div class="press-card__footer">
-                <a href="https://www.estadao.com.br/cultura/divirta-se/mr-cheesecake-abre-primeira-loja-em-sao-paulo-confira-outras-dicas-de-quitutes-na-cidade/" target="_blank" rel="noopener" class="press-card__cta">
-                  <span>Ler matéria completa</span>
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
-                </a>
+
+              <!-- Slide 2: 3 Notícias (Anteriores) -->
+              <div class="press__slide" role="group" aria-roledescription="slide" aria-label="2 de 2">
+                <div class="press__grid">
+                  <!-- Matéria 4: Estadão -->
+                  <article class="press-card">
+                    <a href="https://www.estadao.com.br/cultura/divirta-se/mr-cheesecake-abre-primeira-loja-em-sao-paulo-confira-outras-dicas-de-quitutes-na-cidade/" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria no Estadão: Mr. Cheesecake abre primeira loja em São Paulo; confira outras dicas de quitutes na cidade">
+                      <img src="assets/img/midia_estadao.jpg" alt="Matéria Estadão: Mr. Cheesecake abre primeira loja em São Paulo" loading="lazy" width="600" height="400">
+                      <span class="press-card__badge press-card__badge--estadao">Estadão</span>
+                      <span class="press-card__overlay">
+                        <span class="press-card__overlay-btn">
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
+                          <span>Abrir matéria</span>
+                        </span>
+                      </span>
+                    </a>
+                    <div class="press-card__body">
+                      <div class="press-card__source-line">
+                        <span class="press-card__source-name">Estadão</span>
+                        <span class="press-card__sep">·</span>
+                        <span class="press-card__category">Caderno Divirta-se</span>
+                      </div>
+                      <h3 class="press-card__title">
+                        <a href="https://www.estadao.com.br/cultura/divirta-se/mr-cheesecake-abre-primeira-loja-em-sao-paulo-confira-outras-dicas-de-quitutes-na-cidade/" target="_blank" rel="noopener">
+                          Mr. Cheesecake abre loja em São Paulo; confira dicas de quitutes na cidade
+                        </a>
+                      </h3>
+                      <p class="press-card__excerpt">
+                        “Com inspiração americana, as tortas da marca ganharam endereço próprio na capital paulista, conquistando o público com receitas fiéis assadas à moda de Nova York.”
+                      </p>
+                      <div class="press-card__footer">
+                        <a href="https://www.estadao.com.br/cultura/divirta-se/mr-cheesecake-abre-primeira-loja-em-sao-paulo-confira-outras-dicas-de-quitutes-na-cidade/" target="_blank" rel="noopener" class="press-card__cta">
+                          <span>Ler matéria completa</span>
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Matéria 5: Escape Magazine -->
+                  <article class="press-card">
+                    <a href="https://escapemagazine.com.br/pedro-hering-mr-cheesecake-bake-shop-deli-um-classico-nova-iorquino-em-sao-paulo/" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria na Escape Magazine: Pedro Hering: Mr Cheesecake Bake Shop & Deli, um clássico nova-iorquino em São Paulo">
+                      <img src="assets/img/midia_escape.jpg" alt="Matéria Escape Magazine: Pedro Hering sobre Mr Cheesecake Bake Shop & Deli" loading="lazy" width="600" height="400">
+                      <span class="press-card__badge">Escape Magazine</span>
+                      <span class="press-card__overlay">
+                        <span class="press-card__overlay-btn">
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
+                          <span>Abrir matéria</span>
+                        </span>
+                      </span>
+                    </a>
+                    <div class="press-card__body">
+                      <div class="press-card__source-line">
+                        <span class="press-card__source-name">Escape Magazine</span>
+                        <span class="press-card__sep">·</span>
+                        <span class="press-card__category">Coluna Pedro Hering</span>
+                      </div>
+                      <h3 class="press-card__title">
+                        <a href="https://escapemagazine.com.br/pedro-hering-mr-cheesecake-bake-shop-deli-um-classico-nova-iorquino-em-sao-paulo/" target="_blank" rel="noopener">
+                          Pedro Hering: Mr Cheesecake Bake Shop &amp; Deli, um clássico nova-iorquino em SP
+                        </a>
+                      </h3>
+                      <p class="press-card__excerpt">
+                        “A casa traz para São Paulo a cultura das clássicas delis novaiorquinas, combinando ambiente acolhedor, bagels artesanais com salmão defumado e cheesecake autêntico.”
+                      </p>
+                      <div class="press-card__footer">
+                        <a href="https://escapemagazine.com.br/pedro-hering-mr-cheesecake-bake-shop-deli-um-classico-nova-iorquino-em-sao-paulo/" target="_blank" rel="noopener" class="press-card__cta">
+                          <span>Ler matéria completa</span>
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Matéria 6: Revista TRÄMP -->
+                  <article class="press-card">
+                    <a href="https://tramp.com.br/lifestyle/gastronomia/veja-15-lugares-para-provar-um-bom-cheesecake/" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria na Revista TRÄMP: Veja 15 lugares para provar um bom cheesecake">
+                      <img src="assets/img/midia_tramp.jpg" alt="Matéria Revista TRÄMP: 15 lugares para provar um bom cheesecake" loading="lazy" width="600" height="400">
+                      <span class="press-card__badge">Revista TRÄMP</span>
+                      <span class="press-card__overlay">
+                        <span class="press-card__overlay-btn">
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
+                          <span>Abrir matéria</span>
+                        </span>
+                      </span>
+                    </a>
+                    <div class="press-card__body">
+                      <div class="press-card__source-line">
+                        <span class="press-card__source-name">Revista TRÄMP</span>
+                        <span class="press-card__sep">·</span>
+                        <span class="press-card__category">Gastronomia</span>
+                      </div>
+                      <h3 class="press-card__title">
+                        <a href="https://tramp.com.br/lifestyle/gastronomia/veja-15-lugares-para-provar-um-bom-cheesecake/" target="_blank" rel="noopener">
+                          Veja 15 lugares para provar um bom cheesecake
+                        </a>
+                      </h3>
+                      <p class="press-card__excerpt">
+                        “Fundada em 2015 por Ruby Zucker, a Mr. Cheesecake nasceu na cozinha de casa e rapidamente ganhou destaque em São Paulo com suas receitas assadas à moda novaiorquina.”
+                      </p>
+                      <div class="press-card__footer">
+                        <a href="https://tramp.com.br/lifestyle/gastronomia/veja-15-lugares-para-provar-um-bom-cheesecake/" target="_blank" rel="noopener" class="press-card__cta">
+                          <span>Ler matéria completa</span>
+                          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
               </div>
             </div>
-          </article>
+          </div>
+
+          <button type="button" class="carousel-arrow carousel-arrow--next" id="press-next" aria-label="Próximas notícias" title="Próximas notícias">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+
+        <!-- Indicadores / Dots de navegação -->
+        <div class="press__dots" id="press-dots" role="tablist" aria-label="Navegar entre slides de notícias">
+          <button type="button" class="press-dot is-active" aria-label="Slide 1" aria-selected="true" data-index="0"></button>
+          <button type="button" class="press-dot" aria-label="Slide 2" aria-selected="false" data-index="1"></button>
         </div>
       </div>
     </section>
@@ -998,6 +1132,90 @@
       reviewsCarousel.addEventListener('touchend', startAutoplay, { passive: true });
 
       startAutoplay();
+    }
+
+    // Carrossel Na Mídia
+    const pressCarousel = document.getElementById('press-carousel');
+    const pressPrev = document.getElementById('press-prev');
+    const pressNext = document.getElementById('press-next');
+    const pressDots = document.querySelectorAll('.press-dot');
+
+    if (pressCarousel) {
+      const slides = pressCarousel.querySelectorAll('.press__slide');
+
+      const getCurrentIdx = () => {
+        if (!slides.length) return 0;
+        const scrollLeft = pressCarousel.scrollLeft;
+        let closestIdx = 0;
+        let minDiff = Infinity;
+        slides.forEach((slide, i) => {
+          const diff = Math.abs(slide.offsetLeft - scrollLeft);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestIdx = i;
+          }
+        });
+        return closestIdx;
+      };
+
+      const goToSlide = (idx) => {
+        const target = Math.max(0, Math.min(slides.length - 1, idx));
+        if (slides[target]) {
+          pressCarousel.scrollTo({ left: slides[target].offsetLeft, behavior: 'smooth' });
+        }
+      };
+
+      const updatePressDots = () => {
+        const currentIdx = getCurrentIdx();
+        pressDots.forEach((dot, i) => {
+          const isActive = i === currentIdx;
+          dot.classList.toggle('is-active', isActive);
+          dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+      };
+
+      if (pressPrev) {
+        pressPrev.addEventListener('click', () => {
+          const currentIdx = getCurrentIdx();
+          const prevIdx = currentIdx <= 0 ? slides.length - 1 : currentIdx - 1;
+          goToSlide(prevIdx);
+        });
+      }
+
+      if (pressNext) {
+        pressNext.addEventListener('click', () => {
+          const currentIdx = getCurrentIdx();
+          const nextIdx = currentIdx >= slides.length - 1 ? 0 : currentIdx + 1;
+          goToSlide(nextIdx);
+        });
+      }
+
+      pressDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const idx = parseInt(dot.getAttribute('data-index'), 10);
+          if (!isNaN(idx)) {
+            goToSlide(idx);
+          }
+        });
+      });
+
+      let pressScrollTimeout;
+      pressCarousel.addEventListener('scroll', () => {
+        window.clearTimeout(pressScrollTimeout);
+        pressScrollTimeout = setTimeout(updatePressDots, 60);
+      }, { passive: true });
+
+      pressCarousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          const currentIdx = getCurrentIdx();
+          goToSlide(currentIdx <= 0 ? slides.length - 1 : currentIdx - 1);
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          const currentIdx = getCurrentIdx();
+          goToSlide(currentIdx >= slides.length - 1 ? 0 : currentIdx + 1);
+        }
+      });
     }
   </script>
 </body>
