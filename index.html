@@ -17,7 +17,24 @@
 
   <!-- Faixa de anúncio -->
   <div class="topbar">
-    <p>Sem leite condensado · Sem gelatina · Sem bolacha de maisena · Sem iogurte. <strong>The real deal.</strong></p>
+    <div class="topbar__inner">
+      <p class="topbar__motto">Sem leite condensado · Sem gelatina · Sem bolacha de maisena · Sem iogurte. <strong>The real deal.</strong></p>
+      <div class="topbar__contact">
+        <a href="https://www.instagram.com/mr_cheesecake_sp/" target="_blank" rel="noopener" class="topbar__insta">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-insta"/></svg>
+          @mr_cheesecake_sp
+        </a>
+        <span class="topbar__sep">·</span>
+        <a href="https://wa.me/5511996845663?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20no%20Mr.%20Cheesecake." target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whatsapp"/></svg>
+          (11) 99684-5663
+        </a>
+        <span class="topbar__sep">·</span>
+        <a href="https://www.google.com/maps/place/Mr.+Cheesecake+Bake+Shop+%26+Deli/@-23.5931136,-46.6818986,1067m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94ce571efb4c1325:0x853f7991e7fc0790!8m2!3d-23.5931136!4d-46.6793183!16s%2Fg%2F11fp1k99qy" target="_blank" rel="noopener" class="topbar__rating">
+          ★ 4.7 <small>(144 avaliações)</small>
+        </a>
+      </div>
+    </div>
   </div>
 
   <!-- Header -->
@@ -32,13 +49,20 @@
         <a href="#doces">American Dream</a>
         <a href="#deli">Deli</a>
         <a href="#bebidas">Bebidas</a>
-        <a href="#visite">Visite</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#midia">Na Mídia</a>
+        <a href="#visite">Visite &amp; Horários</a>
       </nav>
 
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="btn btn--navy header__cta">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-insta"/></svg>
-        Encomendar
-      </a>
+      <div class="header__actions">
+        <a href="https://www.instagram.com/mr_cheesecake_sp/" target="_blank" rel="noopener" class="header__social-btn" aria-label="Siga o Mr. Cheesecake no Instagram" title="Instagram @mr_cheesecake_sp">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-insta"/></svg>
+        </a>
+        <a href="https://wa.me/5511996845663?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20no%20Mr.%20Cheesecake." target="_blank" rel="noopener" class="btn btn--whatsapp header__cta">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whatsapp"/></svg>
+          WhatsApp
+        </a>
+      </div>
 
       <button class="header__burger" popovertarget="mobile-menu" aria-label="Abrir menu">
         <span></span><span></span><span></span>
@@ -50,13 +74,27 @@
   <div id="mobile-menu" popover class="mobile-menu">
     <button class="mobile-menu__close" popovertarget="mobile-menu" popovertargetaction="hide" aria-label="Fechar menu">×</button>
     <img src="assets/img/logo.png" alt="" width="96" height="96" class="mobile-menu__logo">
+    <div class="mobile-menu__rating">
+      <span class="stars">★★★★★</span>
+      <strong>4.7 no Google</strong> <small>(144 avaliações)</small>
+    </div>
     <nav aria-label="Menu mobile">
       <a href="#cheesecakes">Cheesecakes</a>
       <a href="#doces">American Dream</a>
       <a href="#deli">Deli</a>
       <a href="#bebidas">Bebidas</a>
-      <a href="#visite">Visite</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#midia">Na Mídia</a>
+      <a href="#visite">Visite &amp; Horários</a>
     </nav>
+    <a href="https://www.instagram.com/mr_cheesecake_sp/" target="_blank" rel="noopener" class="btn btn--insta">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-insta"/></svg>
+      Siga no Instagram
+    </a>
+    <a href="https://wa.me/5511996845663?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20no%20Mr.%20Cheesecake." target="_blank" rel="noopener" class="btn btn--whatsapp">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whatsapp"/></svg>
+      Pedir pelo WhatsApp
+    </a>
     <p class="script">You don't want to miss it!</p>
   </div>
 
@@ -364,37 +402,386 @@
       </div>
     </section>
 
-    <!-- ============ VISITE ============ -->
-    <section id="visite" class="visit scallop-top scallop-top--red">
-      <div class="container visit__inner">
-        <div class="visit__copy reveal">
-          <p class="kicker kicker--light">Não consegue esperar?</p>
-          <h2 class="visit__script script">Don't schvitz.</h2>
-          <p>Descubra nossos sabores e encomende agora o seu cheesecake — ou venha provar uma fatia no balcão.</p>
-          <div class="visit__actions">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="btn btn--navy">
-              <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-insta"/></svg>
-              Siga o Mr. Cheesecake
-            </a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Professor+Atilio+Innocenti+681+Vila+Nova+Concei%C3%A7%C3%A3o+S%C3%A3o+Paulo" target="_blank" rel="noopener" class="btn btn--cream">
-              <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-pin"/></svg>
-              Como chegar
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section id="depoimentos" class="reviews">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Avaliações reais de clientes</p>
+          <h2 class="section-title">Amado por Quem <span class="script script--red">Já Provou</span></h2>
+          <div class="reviews__score-badge">
+            <svg class="google-icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-google"/></svg>
+            <div class="reviews__score-info">
+              <div class="reviews__stars-row">
+                <span class="stars">★★★★★</span>
+                <strong>4.7 de 5.0</strong>
+              </div>
+              <small>Mais de 144 avaliações verificadas no Google Maps</small>
+            </div>
+          </div>
+        </header>
+
+        <!-- Carrossel de Depoimentos -->
+        <div class="reviews__carousel-wrapper reveal">
+          <button type="button" class="carousel-arrow carousel-arrow--prev" id="reviews-prev" aria-label="Depoimento anterior" title="Depoimento anterior">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-left"/></svg>
+          </button>
+
+          <div class="reviews__carousel" id="reviews-carousel" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Depoimentos de clientes">
+            <div class="reviews__track" id="reviews-track">
+              <!-- 1: Eduardo Hofmann -->
+              <article class="review-card" role="group" aria-roledescription="slide" aria-label="1 de 5">
+                <div class="review-card__header">
+                  <img src="assets/img/avatar_eduardo.png" alt="Foto de Eduardo Hofmann" class="review-card__avatar" width="48" height="48" loading="lazy">
+                  <div class="review-card__user">
+                    <h3 class="review-card__name">Eduardo Hofmann</h3>
+                    <span class="review-card__meta">3 meses atrás · Avaliação Google</span>
+                  </div>
+                  <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                </div>
+                <p class="review-card__text">
+                  “Simplesmente o melhor cheesecake que já comi no Brasil, com um menção especial ao de Biscoff! Os bagels também são incríveis (o de salmão vai muito bem no café da manhã). Ambiente agradável, atendimento atencioso. Recomendo muito!”
+                </p>
+                <div class="review-card__highlight">
+                  <span class="highlight-tag">✨ Cheesecake Biscoff</span>
+                  <span class="highlight-tag">✨ Bagel de Salmão</span>
+                </div>
+              </article>
+
+              <!-- 2: jr assessoria esportiva -->
+              <article class="review-card" role="group" aria-roledescription="slide" aria-label="2 de 5">
+                <div class="review-card__header">
+                  <img src="assets/img/avatar_jr.png" alt="Foto de jr assessoria esportiva" class="review-card__avatar" width="48" height="48" loading="lazy">
+                  <div class="review-card__user">
+                    <h3 class="review-card__name">jr assessoria esportiva</h3>
+                    <span class="review-card__meta"><span class="badge-guide">Local Guide</span> · 7 meses atrás</span>
+                  </div>
+                  <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                </div>
+                <p class="review-card__text">
+                  “Fui surpreendido pelo Ruby e sua fantástica equipe. Carismáticos, profissionais e muito educados. Pedi o Hot Dog Coney Island, para beber a Pink lemonade e fechei com o cheese cake New York + um expresso curto. Espaço muito acolhedor, limpo e aconchegante. Recomendo!”
+                </p>
+                <div class="review-card__highlight">
+                  <span class="highlight-tag">✨ Hot Dog Coney Island</span>
+                  <span class="highlight-tag">✨ NY Cheesecake</span>
+                </div>
+              </article>
+
+              <!-- 3: Bruno Micali -->
+              <article class="review-card" role="group" aria-roledescription="slide" aria-label="3 de 5">
+                <div class="review-card__header">
+                  <img src="assets/img/avatar_bruno.png" alt="Foto de Bruno Micali" class="review-card__avatar" width="48" height="48" loading="lazy">
+                  <div class="review-card__user">
+                    <h3 class="review-card__name">Bruno Micali</h3>
+                    <span class="review-card__meta">1 ano atrás · Avaliação Google</span>
+                  </div>
+                  <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                </div>
+                <p class="review-card__text">
+                  “Melhor cheesecake que já comi. Massa leve, ingredientes de primeira linha e calda deliciosa. Pra quem quiser o clássico cheesecake de Nova York, o original, sem firulas, é o melhor que há. As opções salgadas também surpreendem, como o sanduíche de pastrami e o bagel de salmão defumado. Vale cada centavo.”
+                </p>
+                <div class="review-card__highlight">
+                  <span class="highlight-tag">✨ NY Tradicional</span>
+                  <span class="highlight-tag">✨ Sanduíche Pastrami</span>
+                </div>
+              </article>
+
+              <!-- 4: Wellness Girls Club -->
+              <article class="review-card" role="group" aria-roledescription="slide" aria-label="4 de 5">
+                <div class="review-card__header">
+                  <img src="assets/img/avatar_wellness.png" alt="Foto de Wellness Girls Club" class="review-card__avatar" width="48" height="48" loading="lazy">
+                  <div class="review-card__user">
+                    <h3 class="review-card__name">Wellness Girls Club</h3>
+                    <span class="review-card__meta">2 meses atrás · Avaliação Google</span>
+                  </div>
+                  <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                </div>
+                <p class="review-card__text">
+                  “Eu e minhas amigas fomos tomar café da tarde e foi maravilhoso! Desde os bagels até o maravilhoso Cheescake. O meu favorito foi de biscoff (tentem!!). Um beijo especial pro Rubinho e equipe que foram super atenciosos conosco ❤️”
+                </p>
+                <div class="review-card__highlight">
+                  <span class="highlight-tag">✨ Cheesecake Biscoff</span>
+                  <span class="highlight-tag">✨ Café da Tarde</span>
+                </div>
+              </article>
+
+              <!-- 5: Nathália -->
+              <article class="review-card" role="group" aria-roledescription="slide" aria-label="5 de 5">
+                <div class="review-card__header">
+                  <img src="assets/img/avatar_nathalia.png" alt="Foto de Nathália" class="review-card__avatar" width="48" height="48" loading="lazy">
+                  <div class="review-card__user">
+                    <h3 class="review-card__name">Nathália</h3>
+                    <span class="review-card__meta"><span class="badge-guide">Local Guide</span> · 11 meses atrás</span>
+                  </div>
+                  <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                </div>
+                <p class="review-card__text">
+                  “Tudo adorável. Possuem ótimo atendimento, simpatia, e também ótimas promoções na loja. As cheesecakes são ótimas, fatia super generosa e com inúmeras opções de caldas. O ambiente é intimista e aconchegante. Com certeza voltarei mais vezes!”
+                </p>
+                <div class="review-card__highlight">
+                  <span class="highlight-tag">✨ Fatia Generosa</span>
+                  <span class="highlight-tag">✨ Caldas Artesanais</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <button type="button" class="carousel-arrow carousel-arrow--next" id="reviews-next" aria-label="Próximo depoimento" title="Próximo depoimento">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+
+        <!-- Indicadores / Dots de navegação -->
+        <div class="reviews__dots" id="reviews-dots" role="tablist" aria-label="Navegar entre depoimentos">
+          <button type="button" class="review-dot is-active" aria-label="Depoimento 1" aria-selected="true" data-index="0"></button>
+          <button type="button" class="review-dot" aria-label="Depoimento 2" aria-selected="false" data-index="1"></button>
+          <button type="button" class="review-dot" aria-label="Depoimento 3" aria-selected="false" data-index="2"></button>
+          <button type="button" class="review-dot" aria-label="Depoimento 4" aria-selected="false" data-index="3"></button>
+          <button type="button" class="review-dot" aria-label="Depoimento 5" aria-selected="false" data-index="4"></button>
+        </div>
+
+        <!-- Bloco de CTA incentivando a nota e depoimento de 5 estrelas -->
+        <div class="reviews__cta-box reveal">
+          <div class="reviews__cta-content">
+            <span class="reviews__cta-badge">🌟 Sua Opinião É Nosso Maior Orgulho</span>
+            <h3 class="reviews__cta-title">Já nos visitou? Conte sua experiência!</h3>
+            <p class="reviews__cta-text">
+              Sua avaliação ajuda novos apaixonados por doces nova-iorquinos a nos descobrirem. Adoraríamos receber sua nota e depoimento de <strong>5 estrelas no Google Maps</strong>!
+            </p>
+          </div>
+          <div class="reviews__cta-action">
+            <a href="https://www.google.com/maps/place/Mr.+Cheesecake+Bake+Shop+%26+Deli/@-23.5931136,-46.6818986,1067m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94ce571efb4c1325:0x853f7991e7fc0790!8m2!3d-23.5931136!4d-46.6793183!16s%2Fg%2F11fp1k99qy" target="_blank" rel="noopener" class="btn btn--gold btn--rating-cta">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-star"/></svg>
+              <span>Avaliar com 5 Estrelas no Google</span>
             </a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="visit__card reveal">
-          <img src="assets/img/logo.png" alt="" width="120" height="120" loading="lazy">
-          <h3>Bake Shop &amp; Deli</h3>
-          <address>
-            Rua Professor Atílio Innocenti, 681<br>
-            Vila Nova Conceição · São Paulo
-          </address>
-          <ul class="visit__hours">
-            <li><span>Sandwiches</span><strong>até às 17h</strong></li>
-            <li><span>Mac and Cheese</span><strong>11h às 15h</strong></li>
-          </ul>
-          <p class="visit__small">*Taxa de serviço: 10%</p>
+    <!-- ============ MR. CHEESECAKE NA MÍDIA ============ -->
+    <section id="midia" class="press">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Destaque na Imprensa</p>
+          <h2 class="section-title">Mr. Cheesecake <span class="script">na Mídia</span></h2>
+          <p class="section-sub">Veja o que os principais veículos de gastronomia e cultura publicaram sobre a nossa história e o clássico sabor novaiorquino.</p>
+          <div class="squiggle" aria-hidden="true">
+            <svg viewBox="0 0 100 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M2 6 Q 14 0, 26 6 T 50 6 T 74 6 T 98 6"/></svg>
+          </div>
+        </header>
+
+        <div class="press__grid">
+          <!-- Matéria 1: Revista TRÄMP -->
+          <article class="press-card reveal">
+            <a href="https://tramp.com.br/lifestyle/gastronomia/veja-15-lugares-para-provar-um-bom-cheesecake/" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria na Revista TRÄMP: Veja 15 lugares para provar um bom cheesecake">
+              <img src="assets/img/midia_tramp.jpg" alt="Matéria Revista TRÄMP: 15 lugares para provar um bom cheesecake" loading="lazy" width="600" height="400">
+              <span class="press-card__badge">Revista TRÄMP</span>
+              <span class="press-card__overlay">
+                <span class="press-card__overlay-btn">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
+                  <span>Abrir matéria</span>
+                </span>
+              </span>
+            </a>
+            <div class="press-card__body">
+              <div class="press-card__source-line">
+                <span class="press-card__source-name">Revista TRÄMP</span>
+                <span class="press-card__sep">·</span>
+                <span class="press-card__category">Gastronomia</span>
+              </div>
+              <h3 class="press-card__title">
+                <a href="https://tramp.com.br/lifestyle/gastronomia/veja-15-lugares-para-provar-um-bom-cheesecake/" target="_blank" rel="noopener">
+                  Veja 15 lugares para provar um bom cheesecake
+                </a>
+              </h3>
+              <p class="press-card__excerpt">
+                “Fundada em 2015 por Ruby Zucker, a Mr. Cheesecake nasceu na cozinha de casa e rapidamente ganhou destaque em São Paulo com suas receitas assadas à moda novaiorquina.”
+              </p>
+              <div class="press-card__footer">
+                <a href="https://tramp.com.br/lifestyle/gastronomia/veja-15-lugares-para-provar-um-bom-cheesecake/" target="_blank" rel="noopener" class="press-card__cta">
+                  <span>Ler matéria completa</span>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Matéria 2: Escape Magazine -->
+          <article class="press-card reveal">
+            <a href="https://escapemagazine.com.br/pedro-hering-mr-cheesecake-bake-shop-deli-um-classico-nova-iorquino-em-sao-paulo/" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria na Escape Magazine: Pedro Hering: Mr Cheesecake Bake Shop & Deli, um clássico nova-iorquino em São Paulo">
+              <img src="assets/img/midia_escape.jpg" alt="Matéria Escape Magazine: Pedro Hering sobre Mr Cheesecake Bake Shop & Deli" loading="lazy" width="600" height="400">
+              <span class="press-card__badge">Escape Magazine</span>
+              <span class="press-card__overlay">
+                <span class="press-card__overlay-btn">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
+                  <span>Abrir matéria</span>
+                </span>
+              </span>
+            </a>
+            <div class="press-card__body">
+              <div class="press-card__source-line">
+                <span class="press-card__source-name">Escape Magazine</span>
+                <span class="press-card__sep">·</span>
+                <span class="press-card__category">Coluna Pedro Hering</span>
+              </div>
+              <h3 class="press-card__title">
+                <a href="https://escapemagazine.com.br/pedro-hering-mr-cheesecake-bake-shop-deli-um-classico-nova-iorquino-em-sao-paulo/" target="_blank" rel="noopener">
+                  Pedro Hering: Mr Cheesecake Bake Shop &amp; Deli, um clássico nova-iorquino em SP
+                </a>
+              </h3>
+              <p class="press-card__excerpt">
+                “A casa traz para São Paulo a cultura das clássicas delis novaiorquinas, combinando ambiente acolhedor, bagels artesanais com salmão defumado e cheesecake autêntico.”
+              </p>
+              <div class="press-card__footer">
+                <a href="https://escapemagazine.com.br/pedro-hering-mr-cheesecake-bake-shop-deli-um-classico-nova-iorquino-em-sao-paulo/" target="_blank" rel="noopener" class="press-card__cta">
+                  <span>Ler matéria completa</span>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Matéria 3: Estadão -->
+          <article class="press-card reveal">
+            <a href="https://www.estadao.com.br/cultura/divirta-se/mr-cheesecake-abre-primeira-loja-em-sao-paulo-confira-outras-dicas-de-quitutes-na-cidade/" target="_blank" rel="noopener" class="press-card__media" aria-label="Ler matéria no Estadão: Mr. Cheesecake abre primeira loja em São Paulo; confira outras dicas de quitutes na cidade">
+              <img src="assets/img/midia_estadao.jpg" alt="Matéria Estadão: Mr. Cheesecake abre primeira loja em São Paulo" loading="lazy" width="600" height="400">
+              <span class="press-card__badge press-card__badge--estadao">Estadão</span>
+              <span class="press-card__overlay">
+                <span class="press-card__overlay-btn">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-external"/></svg>
+                  <span>Abrir matéria</span>
+                </span>
+              </span>
+            </a>
+            <div class="press-card__body">
+              <div class="press-card__source-line">
+                <span class="press-card__source-name">Estadão</span>
+                <span class="press-card__sep">·</span>
+                <span class="press-card__category">Caderno Divirta-se</span>
+              </div>
+              <h3 class="press-card__title">
+                <a href="https://www.estadao.com.br/cultura/divirta-se/mr-cheesecake-abre-primeira-loja-em-sao-paulo-confira-outras-dicas-de-quitutes-na-cidade/" target="_blank" rel="noopener">
+                  Mr. Cheesecake abre loja em São Paulo; confira dicas de quitutes na cidade
+                </a>
+              </h3>
+              <p class="press-card__excerpt">
+                “Com inspiração americana, as tortas da marca ganharam endereço próprio na capital paulista, conquistando o público com receitas fiéis assadas à moda de Nova York.”
+              </p>
+              <div class="press-card__footer">
+                <a href="https://www.estadao.com.br/cultura/divirta-se/mr-cheesecake-abre-primeira-loja-em-sao-paulo-confira-outras-dicas-de-quitutes-na-cidade/" target="_blank" rel="noopener" class="press-card__cta">
+                  <span>Ler matéria completa</span>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISITE / CONTATO ============ -->
+    <section id="visite" class="visit scallop-top scallop-top--red">
+      <div class="container">
+        <header class="section-head section-head--light reveal">
+          <p class="kicker kicker--light">Venha nos visitar</p>
+          <h2 class="section-title">Onde Estamos <span class="script">&amp; Contato</span></h2>
+          <p class="section-sub">Uma autêntica deli e confeitaria novaiorquina na Vila Nova Conceição. Venha provar uma fatia fresca ou faça sua encomenda!</p>
+        </header>
+
+        <div class="visit__simple reveal">
+          <!-- Coluna 1: Texto & Contatos principais -->
+          <div class="visit__contact-card">
+            <div class="visit__intro">
+              <h3 class="visit__place-name">Mr. Cheesecake Bake Shop &amp; Deli</h3>
+              <p class="visit__text">
+                O legítimo cheesecake nova-iorquino feito com massa de pão de ló artesanal e 100% cream cheese Philadelphia. Esperamos você com fatias frescas, cafés especiais e opções clássicas de deli.
+              </p>
+            </div>
+
+            <ul class="contact-links">
+              <!-- Endereço -->
+              <li class="contact-item">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><use href="#i-pin"/></svg>
+                </span>
+                <div class="contact-item__body">
+                  <small>Endereço</small>
+                  <a href="https://www.google.com/maps/place/Mr.+Cheesecake+Bake+Shop+%26+Deli/@-23.5931136,-46.6818986,1067m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94ce571efb4c1325:0x853f7991e7fc0790!8m2!3d-23.5931136!4d-46.6793183!16s%2Fg%2F11fp1k99qy" target="_blank" rel="noopener">
+                    Rua Professor Atílio Innocenti, 681<br>
+                    Vila Nova Conceição · São Paulo - SP
+                  </a>
+                </div>
+              </li>
+
+              <!-- WhatsApp -->
+              <li class="contact-item">
+                <span class="contact-item__icon contact-item__icon--wa" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><use href="#i-whatsapp"/></svg>
+                </span>
+                <div class="contact-item__body">
+                  <small>WhatsApp / Encomendas</small>
+                  <a href="https://wa.me/5511996845663?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20no%20Mr.%20Cheesecake." target="_blank" rel="noopener">
+                    (11) 99684-5663
+                  </a>
+                </div>
+              </li>
+
+              <!-- Telefone -->
+              <li class="contact-item">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><use href="#i-phone"/></svg>
+                </span>
+                <div class="contact-item__body">
+                  <small>Telefone</small>
+                  <a href="tel:+5511996845663">
+                    (11) 99684-5663
+                  </a>
+                </div>
+              </li>
+
+              <!-- Instagram -->
+              <li class="contact-item">
+                <span class="contact-item__icon contact-item__icon--insta" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><use href="#i-insta"/></svg>
+                </span>
+                <div class="contact-item__body">
+                  <small>Instagram</small>
+                  <a href="https://www.instagram.com/mr_cheesecake_sp/" target="_blank" rel="noopener">
+                    @mr_cheesecake_sp
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="visit__quick-actions">
+              <a href="https://wa.me/5511996845663?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20no%20Mr.%20Cheesecake." target="_blank" rel="noopener" class="btn btn--whatsapp">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whatsapp"/></svg>
+                Conversar no WhatsApp
+              </a>
+              <a href="https://www.google.com/maps/place/Mr.+Cheesecake+Bake+Shop+%26+Deli/@-23.5931136,-46.6818986,1067m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94ce571efb4c1325:0x853f7991e7fc0790!8m2!3d-23.5931136!4d-46.6793183!16s%2Fg%2F11fp1k99qy" target="_blank" rel="noopener" class="btn btn--cream">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-pin"/></svg>
+                Rotas no Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Coluna 2: Mapa do Google Maps -->
+          <div class="visit__map-box">
+            <iframe
+              src="https://maps.google.com/maps?q=Mr.+Cheesecake+Bake+Shop+%26+Deli,+Rua+Professor+Atilio+Innocenti+681+Sao+Paulo&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de localização Mr. Cheesecake Bake Shop &amp; Deli">
+            </iframe>
+            <a href="https://www.google.com/maps/place/Mr.+Cheesecake+Bake+Shop+%26+Deli/@-23.5931136,-46.6818986,1067m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94ce571efb4c1325:0x853f7991e7fc0790!8m2!3d-23.5931136!4d-46.6793183!16s%2Fg%2F11fp1k99qy" target="_blank" rel="noopener" class="visit__map-overlay-btn btn btn--navy">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-pin"/></svg>
+              Abrir no Google Maps
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -409,30 +796,77 @@
         <a href="#doces">Doces</a>
         <a href="#deli">Deli</a>
         <a href="#bebidas">Bebidas</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#midia">Na Mídia</a>
         <a href="#visite">Visite</a>
       </nav>
-      <p class="footer__copy">© <span id="year">2026</span> Mr. Cheesecake. Todos os direitos reservados.</p>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/mr_cheesecake_sp/" target="_blank" rel="noopener" class="footer__social-link footer__social-link--insta" aria-label="Instagram Mr. Cheesecake">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-insta"/></svg>
+          <span>Instagram @mr_cheesecake_sp</span>
+        </a>
+        <a href="https://wa.me/5511996845663?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20no%20Mr.%20Cheesecake." target="_blank" rel="noopener" class="footer__social-link footer__social-link--wa" aria-label="WhatsApp Mr. Cheesecake">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whatsapp"/></svg>
+          <span>WhatsApp (11) 99684-5663</span>
+        </a>
+      </div>
+      <div class="footer__contact">
+        <p><strong>Mr. Cheesecake Bake Shop &amp; Deli</strong></p>
+        <p>Rua Professor Atílio Innocenti, 681 · Vila Nova Conceição · São Paulo - SP</p>
+        <p>
+          <a href="tel:+5511996845663">(11) 99684-5663</a> · 
+          <a href="https://wa.me/5511996845663" target="_blank" rel="noopener">WhatsApp</a> · 
+          <a href="https://www.instagram.com/mr_cheesecake_sp/" target="_blank" rel="noopener">@mr_cheesecake_sp</a> · 
+          <a href="https://mrcheesecake.com.br" target="_blank" rel="noopener">mrcheesecake.com.br</a>
+        </p>
+      </div>
+      <p class="footer__copy">
+        © <span id="year">2026</span> Mr. Cheesecake. Todos os direitos reservados. · Site desenvolvido por <a href="https://orbee360.com.br" target="_blank" rel="noopener">Orbee360</a>
+      </p>
     </div>
   </footer>
 
   <!-- Barra de ações fixa (mobile) -->
   <nav class="actionbar" aria-label="Ações rápidas">
-    <a href="#cardapio-cheesecake">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-menu"/></svg>Cardápio
+    <a href="tel:+5511996845663">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-phone"/></svg>Ligar
     </a>
-    <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="actionbar__main">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-insta"/></svg>Encomendar
+    <a href="https://wa.me/5511996845663?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20no%20Mr.%20Cheesecake." target="_blank" rel="noopener" class="actionbar__main actionbar__main--wa">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whatsapp"/></svg>Pedir no WhatsApp
     </a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Professor+Atilio+Innocenti+681+Vila+Nova+Concei%C3%A7%C3%A3o+S%C3%A3o+Paulo" target="_blank" rel="noopener">
+    <a href="https://www.google.com/maps/place/Mr.+Cheesecake+Bake+Shop+%26+Deli/@-23.5931136,-46.6818986,1067m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94ce571efb4c1325:0x853f7991e7fc0790!8m2!3d-23.5931136!4d-46.6793183!16s%2Fg%2F11fp1k99qy" target="_blank" rel="noopener">
       <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-pin"/></svg>Como chegar
     </a>
   </nav>
 
+  <!-- Botão Flutuante WhatsApp -->
+  <a href="https://wa.me/5511996845663?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20no%20Mr.%20Cheesecake." target="_blank" rel="noopener" class="float-wa" aria-label="Falar no WhatsApp" title="Pedir no WhatsApp">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="back-to-top" class="scroll-top" aria-label="Voltar ao início da página" title="Voltar ao topo" type="button">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow-up"/></svg>
+  </button>
+
   <!-- Ícones SVG -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M5 4h14v16H5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 9h6M9 13h6M9 17h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8 1-.9 1.2c-.2.2-.4.2-.7.1s-1.3-.5-2.5-1.5c-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.8.7.8.2 1.5.2 2.1.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4 0-.1-.2-.2-.5-.3z" fill="currentColor"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-2.9-.4-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z" fill="currentColor"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M18 2v20M21 2v6a3 3 0 0 1-3 3M6 2v7a3 3 0 0 0 3 3v10M3 2v7a3 3 0 0 0 3 3M6 2v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wheelchair" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2" fill="currentColor"/><path d="M5 19a6 6 0 0 0 10.3-4.2M15 11l-3 4h4l3 5M12 8v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="6.5" cy="8.5" r="2.5" fill="currentColor"/><circle cx="17.5" cy="8.5" r="2.5" fill="currentColor"/><circle cx="9.5" cy="4.5" r="2" fill="currentColor"/><circle cx="14.5" cy="4.5" r="2" fill="currentColor"/><path d="M12 11c-3 0-5.5 2.5-5.5 5 0 2 1.5 3 3.5 3s2-.5 2-.5 0 .5 2 .5 3.5-1 3.5-3c0-2.5-2.5-5-5.5-5z" fill="currentColor"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </svg>
 
   <script>
@@ -448,6 +882,123 @@
     syncDrinks();
     mq.addEventListener('change', syncDrinks);
     groups.forEach(g => g.querySelector('summary').addEventListener('click', e => { if (!mq.matches) e.preventDefault(); }));
+
+    // Scroll to Top
+    const scrollTopBtn = document.getElementById('back-to-top');
+    if (scrollTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 350) {
+          scrollTopBtn.classList.add('is-visible');
+        } else {
+          scrollTopBtn.classList.remove('is-visible');
+        }
+      }, { passive: true });
+
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Carrossel de Depoimentos
+    const reviewsCarousel = document.getElementById('reviews-carousel');
+    const reviewsPrev = document.getElementById('reviews-prev');
+    const reviewsNext = document.getElementById('reviews-next');
+    const reviewDots = document.querySelectorAll('.review-dot');
+
+    if (reviewsCarousel) {
+      const cards = reviewsCarousel.querySelectorAll('.review-card');
+
+      const getStep = () => {
+        if (cards.length > 1) {
+          return cards[1].offsetLeft - cards[0].offsetLeft;
+        }
+        return cards[0] ? cards[0].offsetWidth : 360;
+      };
+
+      const updateDots = () => {
+        const step = getStep();
+        if (!step) return;
+        const currentIdx = Math.min(cards.length - 1, Math.max(0, Math.round(reviewsCarousel.scrollLeft / step)));
+        reviewDots.forEach((dot, i) => {
+          const isActive = i === currentIdx;
+          dot.classList.toggle('is-active', isActive);
+          dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+      };
+
+      if (reviewsPrev) {
+        reviewsPrev.addEventListener('click', () => {
+          const step = getStep();
+          reviewsCarousel.scrollBy({ left: -step, behavior: 'smooth' });
+        });
+      }
+
+      if (reviewsNext) {
+        reviewsNext.addEventListener('click', () => {
+          const step = getStep();
+          const maxScroll = reviewsCarousel.scrollWidth - reviewsCarousel.clientWidth - 10;
+          if (reviewsCarousel.scrollLeft >= maxScroll) {
+            reviewsCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            reviewsCarousel.scrollBy({ left: step, behavior: 'smooth' });
+          }
+        });
+      }
+
+      reviewDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const idx = parseInt(dot.getAttribute('data-index'), 10);
+          if (!isNaN(idx) && cards[idx]) {
+            reviewsCarousel.scrollTo({ left: cards[idx].offsetLeft, behavior: 'smooth' });
+          }
+        });
+      });
+
+      let scrollTimeout;
+      reviewsCarousel.addEventListener('scroll', () => {
+        window.clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateDots, 60);
+      }, { passive: true });
+
+      // Suporte a setas do teclado
+      reviewsCarousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          reviewsCarousel.scrollBy({ left: -getStep(), behavior: 'smooth' });
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          reviewsCarousel.scrollBy({ left: getStep(), behavior: 'smooth' });
+        }
+      });
+
+      // Autoplay com pausa por interação
+      let autoPlayTimer = null;
+      const startAutoplay = () => {
+        stopAutoplay();
+        autoPlayTimer = setInterval(() => {
+          const step = getStep();
+          const maxScroll = reviewsCarousel.scrollWidth - reviewsCarousel.clientWidth - 15;
+          if (reviewsCarousel.scrollLeft >= maxScroll) {
+            reviewsCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            reviewsCarousel.scrollBy({ left: step, behavior: 'smooth' });
+          }
+        }, 5000);
+      };
+
+      const stopAutoplay = () => {
+        if (autoPlayTimer) clearInterval(autoPlayTimer);
+      };
+
+      reviewsCarousel.addEventListener('mouseenter', stopAutoplay);
+      reviewsCarousel.addEventListener('mouseleave', startAutoplay);
+      reviewsCarousel.addEventListener('focusin', stopAutoplay);
+      reviewsCarousel.addEventListener('focusout', startAutoplay);
+      reviewsCarousel.addEventListener('touchstart', stopAutoplay, { passive: true });
+      reviewsCarousel.addEventListener('touchend', startAutoplay, { passive: true });
+
+      startAutoplay();
+    }
   </script>
 </body>
 </html>
