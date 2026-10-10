@@ -20,6 +20,7 @@
   --radius: 22px;
   --shadow: 0 20px 45px -20px rgb(30 47 107 / .35);
   --container: 1180px;
+  --scallop: 18px;
 }
 
 *,
@@ -148,73 +149,33 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .link-arrow::after { content: " →"; }
 
-/* =========================================================
-   DIVISOR XADREZ (CHECKERBOARD DINER RIBBON)
-   Transição entre seções com quadradinhos nas cores de cada seção
-   ========================================================= */
-.checker-divider {
-  --c1: var(--red);
-  --c2: var(--cream);
-  --square: 20px;
-  width: 100%;
-  max-width: 100vw;
-  overflow: hidden;
-  height: calc(var(--square) * 2);
-  background-image: conic-gradient(
-    var(--c1) 90deg,
-    var(--c2) 90deg 180deg,
-    var(--c1) 180deg 270deg,
-    var(--c2) 270deg
-  );
-  background-size: calc(var(--square) * 2) calc(var(--square) * 2);
-  background-position: 0 0;
-  display: block;
-  position: relative;
-  z-index: 5;
-  box-shadow: inset 0 1px 0 rgb(0 0 0 / .08), inset 0 -1px 0 rgb(0 0 0 / .08);
+/* ---------- Bordas onduladas (efeito forminha de cupcake) ---------- */
+.scallop { position: relative; }
+.scallop::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  bottom: calc(var(--scallop) * -1 + 1px);
+  height: var(--scallop);
+  background: radial-gradient(circle at 50% 0, var(--sc) calc(var(--scallop) - .5px), transparent var(--scallop)) 0 0 / calc(var(--scallop) * 2) var(--scallop) repeat-x;
+  z-index: 2;
+  pointer-events: none;
 }
+.scallop--red { --sc: var(--red); }
+.scallop--gold { --sc: var(--gold); }
 
-@media (max-width: 768px) {
-  .checker-divider {
-    --square: 16px;
-  }
+.scallop-top { position: relative; }
+.scallop-top::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: calc(var(--scallop) * -1 + 1px);
+  height: var(--scallop);
+  background: radial-gradient(circle at 50% 100%, var(--sct, var(--navy)) calc(var(--scallop) - .5px), transparent var(--scallop)) 0 0 / calc(var(--scallop) * 2) var(--scallop) repeat-x;
+  z-index: 2;
+  pointer-events: none;
 }
-
-/* Variações de cor respeitando as seções adjacentes */
-.checker-divider--red-cream {
-  --c1: var(--red);
-  --c2: var(--cream);
-}
-
-.checker-divider--cream-navy {
-  --c1: var(--cream);
-  --c2: var(--navy);
-}
-
-.checker-divider--navy-gold {
-  --c1: var(--navy);
-  --c2: var(--gold);
-}
-
-.checker-divider--gold-cream {
-  --c1: var(--gold);
-  --c2: var(--cream);
-}
-
-.checker-divider--navy-cream {
-  --c1: var(--navy);
-  --c2: var(--cream);
-}
-
-.checker-divider--cream-red {
-  --c1: var(--cream);
-  --c2: var(--red);
-}
-
-.checker-divider--red-navy {
-  --c1: var(--red);
-  --c2: var(--navy-dark);
-}
+.scallop-top--red { --sct: var(--red); }
 
 /* ---------- Topbar ---------- */
 .topbar {
@@ -369,7 +330,8 @@ ul { list-style: none; margin: 0; padding: 0; }
     var(--red);
   color: var(--white);
   padding-block: clamp(2.5rem, 6vw, 4rem) clamp(3rem, 7vw, 5rem);
-  overflow: hidden;
+  overflow: clip;
+  overflow-clip-margin: var(--scallop);
   max-width: 100vw;
   position: relative;
 }
@@ -569,7 +531,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* =========================================================
    PERKS
    ========================================================= */
-.perks { padding-block: 3.5rem 3rem; background: var(--cream-light); overflow: hidden; max-width: 100vw; }
+.perks { padding-block: calc(var(--scallop) + 3rem) 3rem; background: var(--cream-light); overflow: hidden; max-width: 100vw; }
 .perks__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .perk { text-align: center; display: grid; justify-items: center; gap: .6rem; padding: 1rem; }
 .perk__icon {
@@ -681,7 +643,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 .feature {
   background: var(--gold);
   padding-block: clamp(4rem, 9vw, 7rem);
-  overflow: hidden;
+  overflow: clip;
+  overflow-clip-margin: var(--scallop);
   max-width: 100vw;
   position: relative;
 }
@@ -723,7 +686,7 @@ ul { list-style: none; margin: 0; padding: 0; }
    AMERICAN DREAM
    ========================================================= */
 .dream {
-  padding-block: clamp(4rem, 8vw, 6rem) clamp(5rem, 9vw, 7rem);
+  padding-block: calc(var(--scallop) + clamp(4rem, 8vw, 6rem)) clamp(5rem, 9vw, 7rem);
   overflow: hidden;
   max-width: 100vw;
   position: relative;
@@ -1819,6 +1782,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 @media (max-width: 860px) {
+  :root { --scallop: 12px; }
   body { font-size: 1.0625rem; padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
 
   .topbar { font-size: .66rem; letter-spacing: .08em; }
