@@ -20,7 +20,6 @@
   --radius: 22px;
   --shadow: 0 20px 45px -20px rgb(30 47 107 / .35);
   --container: 1180px;
-  --scallop: 18px;
 }
 
 *,
@@ -140,33 +139,71 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .link-arrow::after { content: " →"; }
 
-/* ---------- Bordas onduladas (efeito forminha de cupcake) ---------- */
-.scallop { position: relative; }
-.scallop::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0;
-  bottom: calc(var(--scallop) * -1 + 1px);
-  height: var(--scallop);
-  background: radial-gradient(circle at 50% 0, var(--sc) calc(var(--scallop) - .5px), transparent var(--scallop)) 0 0 / calc(var(--scallop) * 2) var(--scallop) repeat-x;
-  z-index: 2;
-  pointer-events: none;
+/* =========================================================
+   DIVISOR XADREZ (CHECKERBOARD DINER RIBBON)
+   Transição entre seções com quadradinhos nas cores de cada seção
+   ========================================================= */
+.checker-divider {
+  --c1: var(--red);
+  --c2: var(--cream);
+  --square: 20px;
+  width: 100%;
+  height: calc(var(--square) * 2);
+  background-image: conic-gradient(
+    var(--c1) 90deg,
+    var(--c2) 90deg 180deg,
+    var(--c1) 180deg 270deg,
+    var(--c2) 270deg
+  );
+  background-size: calc(var(--square) * 2) calc(var(--square) * 2);
+  background-position: 0 0;
+  display: block;
+  position: relative;
+  z-index: 5;
+  box-shadow: inset 0 1px 0 rgb(0 0 0 / .08), inset 0 -1px 0 rgb(0 0 0 / .08);
 }
-.scallop--red { --sc: var(--red); }
-.scallop--gold { --sc: var(--gold); }
 
-.scallop-top { position: relative; }
-.scallop-top::before {
-  content: "";
-  position: absolute;
-  left: 0; right: 0;
-  top: calc(var(--scallop) * -1 + 1px);
-  height: var(--scallop);
-  background: radial-gradient(circle at 50% 100%, var(--sct, var(--navy)) calc(var(--scallop) - .5px), transparent var(--scallop)) 0 0 / calc(var(--scallop) * 2) var(--scallop) repeat-x;
-  z-index: 2;
-  pointer-events: none;
+@media (max-width: 768px) {
+  .checker-divider {
+    --square: 16px;
+  }
 }
-.scallop-top--red { --sct: var(--red); }
+
+/* Variações de cor respeitando as seções adjacentes */
+.checker-divider--red-cream {
+  --c1: var(--red);
+  --c2: var(--cream);
+}
+
+.checker-divider--cream-navy {
+  --c1: var(--cream);
+  --c2: var(--navy);
+}
+
+.checker-divider--navy-gold {
+  --c1: var(--navy);
+  --c2: var(--gold);
+}
+
+.checker-divider--gold-cream {
+  --c1: var(--gold);
+  --c2: var(--cream);
+}
+
+.checker-divider--navy-cream {
+  --c1: var(--navy);
+  --c2: var(--cream);
+}
+
+.checker-divider--cream-red {
+  --c1: var(--cream);
+  --c2: var(--red);
+}
+
+.checker-divider--red-navy {
+  --c1: var(--red);
+  --c2: var(--navy-dark);
+}
 
 /* ---------- Topbar ---------- */
 .topbar {
@@ -321,8 +358,6 @@ ul { list-style: none; margin: 0; padding: 0; }
     var(--red);
   color: var(--white);
   padding-block: clamp(2.5rem, 6vw, 4rem) clamp(3rem, 7vw, 5rem);
-  overflow: clip;
-  overflow-clip-margin: var(--scallop);
 }
 .hero__sprinkles {
   position: absolute; inset: 0;
@@ -334,25 +369,109 @@ ul { list-style: none; margin: 0; padding: 0; }
   mask-image: linear-gradient(to bottom, #000 40%, transparent);
   pointer-events: none;
 }
-.hero__inner { position: relative; text-align: center; display: grid; justify-items: center; }
-.hero__title { margin-top: 1rem; display: grid; justify-items: center; }
-.hero__title-small {
-  font-family: var(--f-script);
-  font-weight: 400;
-  font-size: clamp(2rem, 5vw, 3.6rem);
-  color: var(--cream);
-  transform: rotate(-5deg) translateY(.35em);
-  position: relative; z-index: 1;
+.hero__title {
+  margin-top: 0.25rem;
+  display: grid;
+  justify-items: center;
+  position: relative;
+  width: 100%;
 }
-.hero__title-big {
+
+.hero__kicker {
+  text-align: center;
+  margin-top: 0.65rem;
+  margin-bottom: 0.25rem;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   HERO TITLE: TRANSIÇÃO DEFINITIVA (EDITORIAL KINETIC ROLL)
+   ========================================================= */
+.hero__script-stage {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  transform: rotate(-3deg) translateY(.25em);
+  font-family: var(--f-script);
+  font-size: clamp(1.45rem, 3.4vw, 2.7rem);
+  color: var(--cream);
+  min-height: 1.5em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero__script-unit {
+  grid-area: 1 / 1;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  white-space: nowrap;
+  will-change: transform, opacity;
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.08s, opacity 0.5s ease 0.08s;
+}
+
+.hero__script-unit.is-active {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.hero__script-unit.is-out {
+  transform: translateY(-120%);
+  opacity: 0;
+}
+
+.hero__script-unit.is-in {
+  transform: translateY(120%);
+  opacity: 0;
+}
+
+.hero__big-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
   font-family: var(--f-display);
   font-weight: 700;
-  font-size: clamp(3.4rem, 12.5vw, 10.5rem);
-  line-height: .9;
   text-transform: uppercase;
+  font-size: clamp(2.5rem, 10.5vw, 10.5rem);
+  line-height: .9;
   letter-spacing: -.005em;
+  min-height: 1.05em;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.hero__big-unit {
+  grid-area: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--white);
   text-shadow: 0 6px 0 var(--red-dark);
+  white-space: nowrap;
+  will-change: transform, opacity, filter;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.hero__big-unit.is-active {
+  transform: translateY(0%);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.hero__big-unit.is-out {
+  transform: translateY(-115%);
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.hero__big-unit.is-in {
+  transform: translateY(115%);
+  opacity: 0;
+  filter: blur(4px);
 }
 
 .hero__stage {
@@ -384,7 +503,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   fill: var(--cream);
   font-family: var(--f-display);
   font-size: 11.2px;
-  letter-spacing: 3.1px;
+  letter-spacing: 2.8px;
   animation: spin 40s linear infinite;
 }
 
@@ -436,7 +555,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* =========================================================
    PERKS
    ========================================================= */
-.perks { padding-block: calc(var(--scallop) + 3rem) 3rem; background: var(--cream-light); }
+.perks { padding-block: 3.5rem 3rem; background: var(--cream-light); }
 .perks__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .perk { text-align: center; display: grid; justify-items: center; gap: .6rem; padding: 1rem; }
 .perk__icon {
@@ -546,8 +665,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 .feature {
   background: var(--gold);
   padding-block: clamp(4rem, 9vw, 7rem);
-  overflow: clip;
-  overflow-clip-margin: var(--scallop);
 }
 .feature__inner { position: relative; display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: center; }
 .feature__bigword {
@@ -585,7 +702,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* =========================================================
    AMERICAN DREAM
    ========================================================= */
-.dream { padding-block: calc(var(--scallop) + clamp(4rem, 8vw, 6rem)) clamp(5rem, 9vw, 7rem); }
+.dream { padding-block: clamp(4rem, 8vw, 6rem) clamp(5rem, 9vw, 7rem); }
 .dream__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6rem; }
 .treat {
   background: var(--white);
@@ -1654,7 +1771,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__plate img, .hero__ring, .marquee__track { animation: none; }
+  .hero__plate img, .hero__ring, .marquee__track, .hero__title-slide { animation: none; transition: none; }
 }
 
 /* =========================================================
@@ -1669,7 +1786,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 @media (max-width: 860px) {
-  :root { --scallop: 12px; }
   body { font-size: 1.0625rem; padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
 
   .topbar { font-size: .66rem; letter-spacing: .08em; }

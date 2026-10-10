@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/hero_cheesecake.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
 </head>
 <body>
 
@@ -101,14 +101,32 @@
   <main id="topo">
 
     <!-- ============ HERO ============ -->
-    <section class="hero scallop scallop--red">
+    <section class="hero">
       <div class="hero__sprinkles" aria-hidden="true"></div>
       <div class="container hero__inner">
-        <p class="kicker kicker--light">Est. 2015 · Vila Nova Conceição · São Paulo</p>
-        <h1 class="hero__title">
-          <span class="hero__title-small">Authentic</span>
-          <span class="hero__title-big">NY Cheesecake</span>
+        <h1 class="hero__title" id="hero-title" aria-label="Mr. Cheesecake · O melhor cheesecake de SP · Authentic NY Cheesecake">
+          <!-- Texto manuscrito superior -->
+          <div class="hero__script-stage" id="hero-script-stage">
+            <div class="hero__script-unit is-active" id="script-unit-1">
+              <span class="hero__script-text">O melhor cheesecake de SP</span>
+            </div>
+            <div class="hero__script-unit is-in" id="script-unit-2">
+              <span class="hero__script-text">Authentic</span>
+            </div>
+          </div>
+
+          <!-- Título principal grande -->
+          <div class="hero__big-stage" id="hero-big-stage">
+            <div class="hero__big-unit is-active" id="big-unit-1">
+              <span class="hero__big-text">MR. CHEESECAKE</span>
+            </div>
+            <div class="hero__big-unit is-in" id="big-unit-2">
+              <span class="hero__big-text">NY CHEESECAKE</span>
+            </div>
+          </div>
         </h1>
+
+        <p class="kicker kicker--light hero__kicker">Est. 2015 · Vila Nova Conceição · São Paulo</p>
 
         <div class="hero__stage">
           <aside class="hero__note hero__note--left">
@@ -121,7 +139,7 @@
           <div class="hero__plate">
             <svg class="hero__ring" viewBox="0 0 200 200" aria-hidden="true">
               <defs><path id="circle" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs>
-              <text><textPath href="#circle">AUTHENTIC NY CHEESECAKE ✦ DUMB MAD GOOD ✦ SINCE 2015 ✦ </textPath></text>
+              <text><textPath href="#circle">AUTHENTIC NY CHEESECAKE ✦ DUMB MAD GOOD ✦ SINCE 2015 ✦ MR CHEESECAKE ✦ </textPath></text>
             </svg>
             <img src="assets/img/hero_cheesecake.jpg" alt="Fatia alta de cheesecake de Nova York com calda de frutas vermelhas escorrendo" width="900" height="900" fetchpriority="high">
             <span class="sticker sticker--philly">100%<small>Philadelphia</small></span>
@@ -138,6 +156,9 @@
         <p class="hero__script script">You don't want to miss it!</p>
       </div>
     </section>
+
+    <!-- Transição Hero (Vermelho) → Diferenciais (Creme) -->
+    <div class="checker-divider checker-divider--red-cream" aria-hidden="true"></div>
 
     <!-- ============ DIFERENCIAIS ============ -->
     <section class="perks">
@@ -224,6 +245,9 @@
       </div>
     </section>
 
+    <!-- Transição Cheesecakes (Creme) → Marquee (Navy) -->
+    <div class="checker-divider checker-divider--cream-navy" aria-hidden="true"></div>
+
     <!-- ============ MARQUEE ============ -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
@@ -232,8 +256,11 @@
       </div>
     </div>
 
+    <!-- Transição Marquee (Navy) → Feature (Dourado) -->
+    <div class="checker-divider checker-divider--navy-gold" aria-hidden="true"></div>
+
     <!-- ============ DUMB MAD GOOD (faixa destaque) ============ -->
-    <section class="feature scallop scallop--gold">
+    <section class="feature">
       <div class="container feature__inner">
         <p class="feature__bigword" aria-hidden="true">Dumb Mad Good</p>
         <div class="feature__copy reveal">
@@ -248,6 +275,9 @@
         </div>
       </div>
     </section>
+
+    <!-- Transição Feature (Dourado) → American Dream (Creme) -->
+    <div class="checker-divider checker-divider--gold-cream" aria-hidden="true"></div>
 
     <!-- ============ AMERICAN DREAM ============ -->
     <section id="doces" class="dream">
@@ -293,8 +323,11 @@
       </div>
     </section>
 
+    <!-- Transição American Dream (Creme) → Deli (Navy) -->
+    <div class="checker-divider checker-divider--cream-navy" aria-hidden="true"></div>
+
     <!-- ============ DELI ============ -->
-    <section id="deli" class="deli scallop-top">
+    <section id="deli" class="deli">
       <div class="container">
         <header class="section-head section-head--light reveal">
           <p class="kicker kicker--light">Bake Shop &amp; Deli</p>
@@ -351,6 +384,9 @@
         </div>
       </div>
     </section>
+
+    <!-- Transição Deli (Navy) → Bebidas (Creme) -->
+    <div class="checker-divider checker-divider--navy-cream" aria-hidden="true"></div>
 
     <!-- ============ BEBIDAS ============ -->
     <section id="bebidas" class="drinks">
@@ -813,8 +849,11 @@
       </div>
     </section>
 
+    <!-- Transição Na Mídia (Creme) → Visite (Vermelho) -->
+    <div class="checker-divider checker-divider--cream-red" aria-hidden="true"></div>
+
     <!-- ============ VISITE / CONTATO ============ -->
-    <section id="visite" class="visit scallop-top scallop-top--red">
+    <section id="visite" class="visit">
       <div class="container">
         <header class="section-head section-head--light reveal">
           <p class="kicker kicker--light">Venha nos visitar</p>
@@ -920,6 +959,9 @@
       </div>
     </section>
   </main>
+
+  <!-- Transição Visite (Vermelho) → Rodapé (Navy) -->
+  <div class="checker-divider checker-divider--red-navy" aria-hidden="true"></div>
 
   <footer class="footer">
     <div class="container footer__inner">
@@ -1214,6 +1256,96 @@
           e.preventDefault();
           const currentIdx = getCurrentIdx();
           goToSlide(currentIdx >= slides.length - 1 ? 0 : currentIdx + 1);
+        }
+      });
+    }
+    // =========================================================
+    // TRANSIÇÃO DEFINITIVA DO HERO (EDITORIAL KINETIC ROLL)
+    // =========================================================
+    const heroBigUnits = [document.getElementById('big-unit-1'), document.getElementById('big-unit-2')];
+    const heroScriptUnits = [document.getElementById('script-unit-1'), document.getElementById('script-unit-2')];
+
+    if (heroBigUnits[0] && heroBigUnits[1] && heroScriptUnits[0] && heroScriptUnits[1]) {
+      let currentHeroIndex = 0;
+      let isTransitioning = false;
+      let heroAutoTimer = null;
+
+      // Garante estado inicial: MR. CHEESECAKE sempre ativo na entrada do site
+      const resetToInitialState = () => {
+        currentHeroIndex = 0;
+        isTransitioning = false;
+        heroBigUnits[0].className = 'hero__big-unit is-active';
+        heroBigUnits[1].className = 'hero__big-unit is-in';
+        heroScriptUnits[0].className = 'hero__script-unit is-active';
+        heroScriptUnits[1].className = 'hero__script-unit is-in';
+      };
+      resetToInitialState();
+
+      const runEditorialRoll = () => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        const nextIndex = (currentHeroIndex + 1) % 2;
+
+        const prevBig = heroBigUnits[currentHeroIndex];
+        const nextBig = heroBigUnits[nextIndex];
+        const prevScript = heroScriptUnits[currentHeroIndex];
+        const nextScript = heroScriptUnits[nextIndex];
+
+        // Posiciona os elementos de entrada abaixo
+        nextBig.classList.remove('is-active', 'is-out');
+        nextBig.classList.add('is-in');
+        nextScript.classList.remove('is-active', 'is-out');
+        nextScript.classList.add('is-in');
+
+        void nextBig.offsetWidth; // Força reflow no navegador
+
+        // Anima o atual saindo para cima
+        prevBig.classList.remove('is-active');
+        prevBig.classList.add('is-out');
+        prevScript.classList.remove('is-active');
+        prevScript.classList.add('is-out');
+
+        // Anima o novo entrando vindo de baixo
+        nextBig.classList.remove('is-in');
+        nextBig.classList.add('is-active');
+        nextScript.classList.remove('is-in');
+        nextScript.classList.add('is-active');
+
+        currentHeroIndex = nextIndex;
+
+        setTimeout(() => {
+          isTransitioning = false;
+        }, 850);
+      };
+
+      // Fica 7.5 segundos estático na tela antes de alternar
+      const startHeroLoop = () => {
+        if (heroAutoTimer) clearInterval(heroAutoTimer);
+        heroAutoTimer = setInterval(runEditorialRoll, 7500);
+      };
+      const stopHeroLoop = () => {
+        if (heroAutoTimer) clearInterval(heroAutoTimer);
+      };
+
+      // Inicia a contagem de 7.5s somente quando a aba estiver visível e pronta
+      const initHeroCycle = () => {
+        if (!document.hidden) {
+          startHeroLoop();
+        }
+      };
+
+      if (document.readyState === 'complete') {
+        initHeroCycle();
+      } else {
+        window.addEventListener('load', initHeroCycle, { once: true });
+      }
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          stopHeroLoop();
+        } else {
+          // Ao reabrir a aba, se não houver timer rodando, retoma
+          startHeroLoop();
         }
       });
     }
